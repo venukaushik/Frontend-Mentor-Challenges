@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-clr: #ffffff;
+  --sedan-clr: #e28625;
+  --suv-clr: #006971;
+  --luxury-clr: #004140;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f2f2;
+}
+
+.container {
+  width: 921px;
+  display: flex;
+}
+
+.about {
+  color: var(--primary-clr);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.9rem 3.5rem 2.9rem 2.9rem;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.sedan-box {
+  border-radius: 10px 0 0 10px;
+  /* width: 100%; */
+  width: 307px;
+  background-color: var(--sedan-clr);
+}
+
+.suv-box {
+  /* width: 100%; */
+  width: 307px;
+  background-color: var(--suv-clr);
+}
+
+.luxury-box {
+  border-radius: 0 10px 10px 0;
+  /* width: 100%; */
+  width: 307px;
+  background-color: var(--luxury-clr);
+}
+
+.about {
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+button {
+  cursor: url(assests/pointer_image.svg), auto;
+  margin-top: 4.8rem;
+  font-size: 15px;
+  border: none;
+  padding: 15px 34px;
+  border-radius: 30px;
+}
+
+.sedan-box button {
+  color: var(--sedan-clr);
+  background-color: var(--primary-clr);
+}
+
+.sedan-box button:hover {
+  background-color: var(--sedan-clr);
+  color: var(--primary-clr);
+  border: 2px solid var(--primary-clr);
+}
+
+.suv-box button {
+  color: var(--suv-clr);
+  background-color: var(--primary-clr);
+}
+
+.suv-box button:hover {
+  background-color: var(--suv-clr);
+  color: var(--primary-clr);
+  border: 2px solid var(--primary-clr);
+}
+
+.luxury-box button {
+  color: var(--luxury-clr);
+  background-color: var(--primary-clr);
+}
+
+.luxury-box button:hover {
+  background-color: var(--luxury-clr);
+  color: var(--primary-clr);
+  border: 2px solid var(--primary-clr);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 7rem;
+  }
+
+  .container {
+    display: block;
+    /* width: 307px; */
+    /* margin: auto; */
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+  p {
+    font-size: 22px;
+  }
+  .card {
+    width: 407px;
+    padding: 2.9rem 5rem 2.9rem 4rem;
+  }
+
+  .sedan-box {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .luxury-box {
+    border-radius: 0 0 10px 10px;
+  }
+
+  button {
+    font-size: 21px;
+    padding: 18px 50px;
+  }
+}
