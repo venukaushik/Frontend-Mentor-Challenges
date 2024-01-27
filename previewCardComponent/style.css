@@ -48,20 +48,17 @@ p {
 
 .sedan-box {
   border-radius: 10px 0 0 10px;
-  /* width: 100%; */
   width: 307px;
   background-color: var(--sedan-clr);
 }
 
 .suv-box {
-  /* width: 100%; */
   width: 307px;
   background-color: var(--suv-clr);
 }
 
 .luxury-box {
   border-radius: 0 10px 10px 0;
-  /* width: 100%; */
   width: 307px;
   background-color: var(--luxury-clr);
 }
@@ -122,8 +119,6 @@ button {
 
   .container {
     display: block;
-    /* width: 307px; */
-    /* margin: auto; */
   }
 
   h1 {
