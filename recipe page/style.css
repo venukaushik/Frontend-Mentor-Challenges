@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Rose-White: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+}
+
+body {
+  padding: 4rem 2rem;
+  background-color: var(--Eggshell);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  max-width: 750px;
+  background-color: var(--White);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-img {
+  padding: 3rem 3rem 2rem;
+}
+
+.card-content {
+  padding: 0 3rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about-heading {
+  font-family: "Young serif", sans-serif;
+  font-weight: 400;
+  font-size: 47px;
+}
+
+.desc {
+  font-size: 15px;
+  color: var(--Dark-Charcoal);
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.prep-box {
+  background-color: var(--Rose-White);
+  padding: 1.55rem;
+  border-radius: 10px;
+  font-family: "Outfit", sans-serif;
+}
+
+.prep-box h3 {
+  color: var(--Dark-Raspberry);
+}
+
+.prep-box ul {
+  padding: 1rem 0 0 1.3rem;
+}
+
+.prep-box ul li::marker {
+  list-style: disc;
+  color: var(--Dark-Raspberry);
+}
+
+.prep-box ul li {
+  padding-left: 0.95rem;
+}
+
+.prep-box span {
+  font-weight: bold;
+  opacity: 0.7;
+  font-size: 1.1rem;
+}
+
+.heading {
+  font-family: "Young serif", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: var(--Nutmeg);
+}
+
+.ingredients ul,
+.instructions ul {
+  padding: 1rem 0 0 1.3rem;
+}
+
+.ingredients ul li,
+.instructions ul li {
+  padding-bottom: 15px;
+  color: rgb(71, 67, 67);
+  padding-left: 1.3rem;
+  line-height: 1.6;
+}
+
+.ingredients ul li::marker,
+.instructions ul li::marker {
+  opacity: 1;
+  color: var(--Nutmeg);
+}
+
+.seperator {
+  width: 100%;
+  background-color: var(--Light-Grey);
+  height: 1.7px;
+}
+
+.instructions ul li span {
+  color: var(--Dark-Charcoal);
+  font-family: "Outfit", sans-serif;
+  opacity: 0.9;
+  font-weight: 900;
+  font-size: 17px;
+}
+
+.nutri-val p {
+  padding-top: 25px;
+}
+
+table {
+  margin-top: 20px;
+  width: 600px;
+  border-spacing: 20px;
+  border-collapse: collapse;
+}
+
+th {
+  padding-left: 20px;
+  text-align: left;
+  color: var(--Dark-Charcoal);
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+td {
+  font-family: "Outfit", sans-serif;
+  font-weight: 900;
+  color: var(--Nutmeg);
+}
+
+th,
+td {
+  padding-block: 15px;
+}
+
+tr:not(:last-child) {
+  border-bottom: 1px solid var(--Light-Grey);
+}
+
+/* mobile responsive */
+
+@media (max-width: 553px) {
+  body {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .wrapper {
+    padding-block: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+  .card-content {
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  .about-heading {
+    font-size: 38px;
+  }
+
+  .card-img {
+    padding: 0 0 2rem;
+  }
+
+  img {
+    border-radius: 0;
+  }
+
+  table {
+    width: 400px;
+    border-spacing: 10px;
+  }
+
+  th {
+    padding-left: 0;
+  }
+}
