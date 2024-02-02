@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,800&display=swap");
+
+/* p = primary colors */
+/* n = neutral colors */
+:root {
+  --p-soft-red: hsl(7, 99%, 70%);
+  --p-yellow: hsl(55, 100%, 49%);
+  --p-dark-cyan: hsl(167, 40%, 24%); /* graphic design text */
+  --p-dark-blue: hsl(198, 62%, 26%); /* photography text */
+  --p-darkM-cyan: hsl(168, 34%, 41%); /* footer */
+  --n-dark-blue: hsl(212, 27%, 19%);
+  --n-vdark-gray-blue: hsl(213, 10%, 55%);
+  --n-dark-gray-blue: hsl(232, 10%, 55%);
+  --n-gray-blue: hsl(210, 4%, 67%);
+  --n-white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.wrapper {
+  padding: 1.5rem;
+  background: url(assests/desktop-image/image-header.jpg);
+  background-size: cover;
+  height: 100%;
+  background-position: center center;
+}
+
+.logo img {
+  height: 35px;
+  width: 100%;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  /* gap: 50px; */
+}
+
+.nav-link ul,
+.footer-link ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* gap: 30px; */
+  color: var(--n-white);
+  padding: 0 10px;
+  /* position: relative; */
+}
+
+.nav-link ul li,
+.footer-link ul li {
+  padding-inline: 25px;
+  cursor: pointer;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  list-style-type: none;
+  font-size: 18px;
+}
+
+.nav-link ul button {
+  margin-left: 25px;
+  cursor: pointer;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 13px 25px;
+  border-radius: 50px;
+  border: none;
+}
+
+.nav-link ul button:hover {
+  background-color: var(--n-gray-blue);
+  color: var(--n-white);
+}
+
+.heading {
+  padding-block: 100px;
+  font-family: "Fraunces", sans-serif;
+  color: var(--n-white);
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 15px;
+}
+
+.icon-arrow-down {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 35px;
+}
+
+section {
+  display: flex;
+}
+
+section > div {
+  width: 50%;
+}
+
+.section-flex-direction {
+  flex-direction: row-reverse;
+}
+
+.content {
+  padding: 150px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+.content h1 {
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+  line-height: 1.4;
+}
+
+section p {
+  color: var(--n-dark-gray-blue);
+  font-size: 19px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.more {
+  display: block;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: black;
+  position: relative;
+  z-index: 10;
+  padding-left: 3px;
+  cursor: pointer;
+}
+
+.more::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 5px;
+  bottom: 1px;
+  left: -5px;
+  width: 30%;
+  height: 9px;
+  background-color: var(--p-yellow);
+  opacity: 0.4;
+  transition: transform 0.3s ease-in-out;
+}
+
+.more:hover::before {
+  height: 16px;
+  transform: translateY(-13px);
+}
+
+.section-flex-direction .more::before {
+  background-color: var(--p-soft-red);
+  opacity: 0.4;
+}
+
+.img1 {
+  height: 80vh;
+  background-image: url("assests/desktop-image/image-graphic-design.jpg");
+  background-size: cover;
+}
+
+.img2 {
+  height: 80vh;
+  background-image: url("assests/desktop-image/image-photography.jpg");
+  background-size: cover;
+}
+
+.img1,
+.img2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  padding: 0 190px 50px 190px;
+}
+
+.imgs h1 {
+  font-family: "Fraunces", serif;
+  font-size: 30px;
+}
+
+.img1 h1,
+.img1 p {
+  color: var(--p-dark-cyan);
+}
+
+.img2 h1,
+.img2 p {
+  color: var(--p-dark-blue);
+}
+
+.imgs p {
+  font-size: 18px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.testimonial {
+  padding: 130px 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+
+.testimonial h2 {
+  font-family: "Fraunces", serif;
+  color: var(--n-vdark-gray-blue);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 24px;
+}
+
+.clients {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 40px;
+}
+
+.client {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 70px;
+}
+
+.review,
+.name {
+  text-align: center;
+}
+
+.review {
+  color: var(--n-dark-gray-blue);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.name h3 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: #23303e;
+  font-size: 16px;
+}
+
+.name p {
+  font-size: 16px;
+  color: var(--n-gray-blue);
+  line-height: 2.7;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.gallery img {
+  width: 25%;
+}
+
+footer {
+  background-color: rgb(149 213 199);
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-block: 4rem;
+}
+
+footer img {
+  width: 170px;
+}
+
+.footer-link ul {
+  gap: 50px;
+  color: var(--p-darkM-cyan);
+}
+
+.footer-icons {
+  padding-top: 45px;
+  display: flex;
+  gap: 30px;
+  font-size: 23px;
+}
+
+.footer-icons i {
+  cursor: pointer;
+  color: var(--p-dark-cyan);
+  opacity: 0.9;
+}
+
+footer p {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+footer p b {
+  padding-bottom: 3px;
+  border-bottom: 3px dotted var(--p-dark-cyan);
+  color: var(--p-dark-blue);
+}
+
+/*hamburger menu icon */
+.menu {
+  display: none;
+}
+
+.open-menu,
+.close-menu {
+  position: absolute;
+  right: 0;
+  font-size: 2.1rem;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
