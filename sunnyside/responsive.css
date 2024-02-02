@@ -1,0 +1,194 @@
+@media screen and (max-width: 650px) {
+  .wrapper {
+    padding: 2rem;
+    background: url("assests/mobile-image/image-header\ \(1\).jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  /* menu responsive start */
+  .menu-open {
+    color: rgb(164, 22, 22);
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .menu-open span {
+    border-radius: 30px;
+    width: 50px;
+    height: 7px;
+    transition: all 0.5s ease-in-out;
+    background-color: white;
+  }
+
+  .menu-close {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .menu-close span {
+    border-radius: 30px;
+    width: 50px;
+    height: 7px;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu-close span:nth-child(2) {
+    transition: opacity 0.1s linear ease-in-out;
+    opacity: 0;
+  }
+
+  .menu-close span:nth-child(1) {
+    transform-origin: top left;
+    transform: rotate(55deg);
+  }
+
+  .menu-close span:nth-child(3) {
+    transform-origin: left bottom;
+    transform: rotate(-55deg);
+  }
+
+  .nav-link {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    gap: 10px;
+    width: 100%;
+    background-color: var(--n-white);
+    border-radius: 10px;
+  }
+
+  .show-menu {
+    display: block;
+  }
+
+  .nav-link ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 50px;
+    gap: 40px;
+    color: var(--n-dark-blue);
+  }
+
+  .nav-link ul li {
+    cursor: pointer;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    list-style-type: none;
+    font-size: 18px;
+  }
+
+  .nav-link ul button {
+    padding: 15px 80px;
+  }
+
+  /* menu responsive end */
+
+  .heading {
+    padding-block: 70px;
+    letter-spacing: 7px;
+    flex-wrap: wrap;
+    font-size: 2.5rem;
+    overflow: hidden;
+  }
+
+  section {
+    flex-direction: column-reverse;
+  }
+
+  section > div {
+    width: 100%;
+  }
+
+  .content {
+    padding: 70px 25px;
+    text-align: center;
+  }
+
+  .content h1 {
+    font-size: 30px;
+  }
+
+  .more::before {
+    bottom: 1px;
+    left: 28%;
+    width: 45%;
+  }
+
+  .section-flex-direction {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .imgs {
+    flex-direction: column;
+  }
+
+  .img1 {
+    height: 100vh;
+    background-image: url("assests/mobile-image/image-graphic-design\ \(1\).jpg");
+    background-size: cover;
+  }
+
+  .img2 {
+    height: 100vh;
+    background-image: url("assests/mobile-image/image-photography\ \(1\).jpg");
+    background-size: cover;
+  }
+
+  .img1,
+  .img2 {
+    padding: 0 20px 50px 20px;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .testimonial h2 {
+    font-size: 20px;
+  }
+
+  .clients {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .client {
+    padding-inline: 15px;
+    gap: 30px;
+  }
+
+  .gallery {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .gallery img {
+    width: 50%;
+  }
+
+  .credit {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
